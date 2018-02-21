@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_begin="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/guide"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:id="@+id/grid"
+        >
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross"
+            android:id="@+id/tl" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/cross" />
+
+    </GridLayout>
 
 </android.support.constraint.ConstraintLayout>

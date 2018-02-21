@@ -18,6 +18,7 @@ import fr.iiie.android.gameboxproject.tools.Analytics;
 
 public class App extends Application
 {
+
     private static Boolean bIsConnected = false;
     private static RestClient restClient;
     private static NetworkBroadcastReceiver networkBroadcastReceiver;

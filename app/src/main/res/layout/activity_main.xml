@@ -24,6 +24,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar_name"
+                android:text="test"
+
+                android:textColor="@color/wtw"
+                />
 
         </android.support.v7.widget.Toolbar>
 

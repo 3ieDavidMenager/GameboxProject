@@ -25,14 +25,41 @@ import fr.iiie.android.gameboxproject.bus.SnackEvent
 import fr.iiie.android.gameboxproject.bus.SwitchFragmentEvent
 import fr.iiie.android.gameboxproject.data.app.App
 import fr.iiie.android.gameboxproject.business.main.MainController
+import fr.iiie.android.gameboxproject.ui.fragment.level_select_frag
+import fr.iiie.android.gameboxproject.ui.fragment.menu_frag
 import fr.iiie.android.gameboxproject.ui.fragment.sample.SampleFragment
+import fr.iiie.android.gameboxproject.ui.fragment.tic_tac_frag
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.game_select.*
+import kotlinx.android.synthetic.main.menu.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , menu_frag.menu_interface, level_select_frag.level_select_inter {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val frag_man = supportFragmentManager
+        frag_man.beginTransaction().replace(R.id.activity_main_container, menu_frag()).commit()
+        toolbar_name.text =""
 
     }
+
+    override fun onStartClicked() {
+        if(player_name.text.isEmpty()) {
+            noname_msg.text = "Please enter your name first"
+        }
+        else {
+
+            supportFragmentManager.beginTransaction().replace(R.id.activity_main_container, level_select_frag()).commit()
+
+            toolbar_name.text = "Hello " + player_name.text
+        }
+    }
+
+    override fun onTicTacToeClicked() {
+        supportFragmentManager.beginTransaction().replace(R.id.activity_main_container, tic_tac_frag()).commit()
+    }
+
 }
+

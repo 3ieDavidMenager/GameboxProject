@@ -7,5 +7,6 @@
     <color name="menu">#9600ff</color>
     <color name="black">#000000</color>
     <color name="grey">#c1c1c1</color>
+    <color name="red">#FF0000</color>
 
 </resources>

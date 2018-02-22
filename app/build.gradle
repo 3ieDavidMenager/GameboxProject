@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-
+apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 27
     buildToolsVersion "27.0.3"
@@ -51,6 +51,8 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
+
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.github.bumptech.glide:glide:4.5.0'
 	compile 'com.github.bumptech.glide:okhttp3-integration:4.5.0@aar'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
